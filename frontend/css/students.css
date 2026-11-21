@@ -1,0 +1,1316 @@
+
+/* =====================================================
+   STUDENTS PAGE
+===================================================== */
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+
+    width: 100%;
+
+    padding: 25px 40px;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.page-header h1 {
+
+    margin-bottom: 5px;
+
+    color: #222;
+
+}
+
+
+.page-header p {
+
+    color: #777;
+
+}
+
+
+/* =========================
+   ADD STUDENT BUTTON
+========================= */
+
+.add-student-btn {
+
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    background: #222;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: background 0.2s ease;
+
+}
+
+
+.add-student-btn:hover {
+
+    background: #444;
+
+}
+
+
+/* =====================================================
+   MAIN STUDENTS CONTAINER
+===================================================== */
+
+.students-container {
+
+    padding: 30px 40px;
+
+}
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.student-stats {
+
+    margin-bottom: 30px;
+
+}
+
+
+.stat-card {
+
+    width: 220px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.stat-title {
+
+    display: block;
+
+    color: #777;
+
+    margin-bottom: 8px;
+
+}
+
+
+.stat-number {
+
+    display: block;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: #222;
+
+}
+
+
+/* =====================================================
+   SEARCH & FILTER
+===================================================== */
+
+.filter-panel {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr auto;
+
+    gap: 15px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.06);
+
+    align-items: end;
+
+}
+
+
+.filter-panel label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+
+}
+
+
+.filter-panel input,
+.filter-panel select {
+
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #d5dbe5;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    background: white;
+
+    font-family: inherit;
+
+}
+
+
+.filter-panel input:focus,
+.filter-panel select:focus {
+
+    border-color: #1565c0;
+
+}
+
+
+.reset-btn {
+
+    background: #455a64;
+
+}
+
+
+.reset-btn:hover {
+
+    background: #263238;
+
+}
+
+
+/* =====================================================
+   STUDENTS GRID
+===================================================== */
+
+.students-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(300px, 1fr)
+        );
+
+    gap: 20px;
+
+}
+
+
+/* =====================================================
+   STUDENT CARD
+===================================================== */
+
+.student-card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.student-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.student-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =====================================================
+   STUDENT AVATAR
+===================================================== */
+
+.student-avatar {
+
+    width: 60px;
+
+    height: 60px;
+
+    min-width: 60px;
+
+    min-height: 60px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #0d47a1;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    border: 3px solid #e3f2fd;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* =====================================================
+   ACTUAL PROFILE IMAGE
+===================================================== */
+
+.student-profile-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 50%;
+
+}
+
+
+/* =====================================================
+   DEFAULT INITIALS AVATAR
+===================================================== */
+
+.student-avatar .default-avatar {
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+    background: #0d47a1;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   STUDENT NAME
+===================================================== */
+
+.student-name-section {
+
+    min-width: 0;
+
+}
+
+
+.student-name-section h2 {
+
+    font-size: 20px;
+
+    margin: 0 0 4px 0;
+
+    color: #222;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.student-name-section span {
+
+    font-size: 13px;
+
+    color: #777;
+
+}
+
+
+/* =====================================================
+   STUDENT INFORMATION
+===================================================== */
+
+.student-info {
+
+    border-top: 1px solid #eee;
+
+    padding-top: 15px;
+
+}
+
+
+.info-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 8px 0;
+
+    font-size: 14px;
+
+}
+
+
+.info-row strong {
+
+    color: #555;
+
+    flex-shrink: 0;
+
+}
+
+
+.info-row span {
+
+    color: #333;
+
+    text-align: right;
+
+    word-break: break-word;
+
+}
+
+
+/* =====================================================
+   CARD FOOTER
+===================================================== */
+
+.student-card-footer {
+
+    margin-top: 15px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #eee;
+
+}
+
+
+.view-btn {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 10px;
+
+    text-align: center;
+
+    background: #222;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    transition:
+        background 0.2s ease;
+
+}
+
+
+.view-btn:hover {
+
+    background: #444;
+
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+#loading {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #777;
+
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+#errorMessage {
+
+    display: none;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    background: #ffe5e5;
+
+    color: #c00;
+
+    border-radius: 6px;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   NO STUDENTS
+===================================================== */
+
+.no-students {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: white;
+
+    border-radius: 10px;
+
+}
+
+
+.no-students h2 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.no-students p {
+
+    color: #777;
+
+    margin-bottom: 20px;
+
+}
+
+
+.no-students a {
+
+    display: inline-block;
+
+    padding: 10px 15px;
+
+    background: #222;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+}
+
+
+/* =====================================================
+   BADGE
+===================================================== */
+
+.badge {
+
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    background: #e3f2fd;
+
+    color: #1565c0;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    margin: 3px 2px 0 0;
+
+}
+
+
+/* =====================================================
+   STUDENT DETAILS PAGE
+===================================================== */
+
+
+/* =========================
+   DETAILS CONTAINER
+========================= */
+
+.student-details-container {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+
+}
+
+
+/* =========================
+   DETAILS CARD
+========================= */
+
+.student-details-card {
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.07);
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================================
+   DETAILS HEADER
+===================================================== */
+
+.details-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #e5e9f0;
+
+}
+
+
+/* =====================================================
+   DETAILS PROFILE PICTURE
+===================================================== */
+
+.profile-picture-wrapper {
+
+    position: relative;
+
+    width: 120px;
+
+    height: 120px;
+
+    flex-shrink: 0;
+
+}
+
+
+.details-avatar {
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #e3f2fd;
+
+    border: 4px solid white;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.18);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.profile-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   DETAILS DEFAULT AVATAR
+===================================================== */
+
+.details-avatar .default-avatar {
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+    background: #0d47a1;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   CHANGE PHOTO BUTTON
+===================================================== */
+
+.change-photo-btn {
+
+    position: absolute;
+
+    right: -4px;
+
+    bottom: -4px;
+
+    width: 38px;
+
+    height: 38px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background: #1565c0;
+
+    color: white;
+
+    border: 3px solid white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.change-photo-btn:hover {
+
+    background: #0d47a1;
+
+    transform: scale(1.08);
+
+}
+
+
+/* =====================================================
+   STUDENT TITLE
+===================================================== */
+
+.student-title h2 {
+
+    margin-bottom: 7px;
+
+    font-size: 28px;
+
+    color: #222;
+
+}
+
+
+.student-title p {
+
+    color: #777;
+
+    font-size: 14px;
+
+    word-break: break-all;
+
+}
+
+
+/* =====================================================
+   DETAILS BODY
+===================================================== */
+
+.details-body {
+
+    padding: 10px 0;
+
+}
+
+
+/* =====================================================
+   STUDENT INFORMATION
+===================================================== */
+
+.student-info {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    padding-top: 30px;
+
+}
+
+
+.info-item {
+
+    padding: 18px;
+
+    background: #f8faff;
+
+    border: 1px solid #e5e9f0;
+
+    border-radius: 8px;
+
+}
+
+
+.info-label {
+
+    display: block;
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.info-value {
+
+    display: block;
+
+    color: #222;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    word-break: break-word;
+
+}
+
+
+/* =====================================================
+   DETAIL ITEM
+===================================================== */
+
+.detail-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+
+.detail-label {
+
+    font-weight: bold;
+
+    color: #555;
+
+}
+
+
+.detail-value {
+
+    color: #333;
+
+    text-align: right;
+
+    word-break: break-word;
+
+}
+
+
+/* =====================================================
+   DETAILS FOOTER
+===================================================== */
+
+.details-footer {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    padding: 25px 0 0;
+
+}
+
+
+.details-btn {
+
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    background: #222;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+}
+
+
+.details-btn:hover {
+
+    background: #444;
+
+}
+
+
+/* =====================================================
+   EDIT BUTTON
+===================================================== */
+
+.edit-btn {
+
+    background: #555;
+
+}
+
+
+.edit-btn:hover {
+
+    background: #333;
+
+}
+
+
+/* =====================================================
+   DELETE BUTTON
+===================================================== */
+
+.delete-btn {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    background: #c62828;
+
+    color: white;
+
+}
+
+
+.delete-btn:hover {
+
+    background: #a91f1f;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .filter-panel {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .page-header {
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .students-container {
+
+        padding: 20px;
+
+    }
+
+
+    .student-stats {
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .stat-card {
+
+        width: 100%;
+
+    }
+
+
+    .students-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .student-name-section h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    .student-avatar {
+
+        width: 55px;
+
+        height: 55px;
+
+        min-width: 55px;
+
+        min-height: 55px;
+
+    }
+
+
+    .student-avatar .default-avatar {
+
+        font-size: 17px;
+
+    }
+
+
+    .student-details-card {
+
+        padding: 22px;
+
+    }
+
+
+    .details-header {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .student-info {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .student-details-container {
+
+        padding: 20px 15px;
+
+    }
+
+
+    .details-header {
+
+        padding-bottom: 20px;
+
+    }
+
+
+    .details-body {
+
+        padding: 10px 0;
+
+    }
+
+
+    .detail-item {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+
+    .detail-value {
+
+        text-align: left;
+
+    }
+
+
+    .details-footer {
+
+        padding-top: 20px;
+
+    }
+
+}
+
+
+
+
+
+/* =========================================
+   STUDENT DETAILS PROFILE IMAGE
+========================================= */
+
+.details-profile-wrapper {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.details-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+
+    background: #0d47a1;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Actual uploaded profile image */
+.details-profile-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+}
+
+/* Default initials when image doesn't exist */
+.details-default-avatar {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    background: #0d47a1;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+    font-weight: bold;
+}
+
+/* Student name and ID */
+.student-title {
+    min-width: 0;
+}
+
+.student-title h2 {
+    margin: 0 0 7px 0;
+
+    font-size: 28px;
+    color: #222;
+}
+
+.student-title p {
+    margin: 0;
+
+    color: #777;
+    font-size: 14px;
+
+    word-break: break-all;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .details-header {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .details-profile-wrapper {
+        width: 110px;
+        height: 110px;
+    }
+
+    .details-avatar {
+        width: 110px;
+        height: 110px;
+    }
+
+    .details-default-avatar {
+        font-size: 34px;
+    }
+
+    .student-title h2 {
+        font-size: 24px;
+    }
+}
+
+

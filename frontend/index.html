@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard - Student Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        .dashboard {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 40px 20px;
+        }
+
+
+        .welcome {
+            margin-bottom: 30px;
+        }
+
+
+        .welcome h1 {
+            font-size: 32px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .welcome p {
+            color: #777;
+        }
+
+
+        .stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 20px;
+
+            margin-bottom: 35px;
+        }
+
+
+        .stat-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 15px rgba(0, 0, 0, 0.07);
+
+            border-left: 4px solid #1565c0;
+        }
+
+
+        .stat-card h3 {
+            color: #777;
+
+            font-size: 14px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .stat-card strong {
+            font-size: 35px;
+
+            color: #0d47a1;
+        }
+
+
+        .dashboard-sections {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 20px;
+        }
+
+
+        .dashboard-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 15px rgba(0, 0, 0, 0.07);
+        }
+
+
+        .dashboard-card h2 {
+            margin-bottom: 10px;
+        }
+
+
+        .dashboard-card p {
+            color: #777;
+
+            margin-bottom: 20px;
+        }
+
+
+        .dashboard-actions {
+            display: flex;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .secondary-btn {
+            background: #e3f2fd;
+
+            color: #1565c0;
+
+            text-decoration: none;
+
+            padding: 10px 15px;
+
+            border-radius: 6px;
+
+            font-size: 14px;
+        }
+
+
+        .secondary-btn:hover {
+            background: #bbdefb;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+ <div id="navbar"></div>
+
+
+<!-- =========================
+     DASHBOARD
+========================= -->
+
+<main class="dashboard">
+
+
+    <div class="welcome">
+
+        <h1>
+            Dashboard
+        </h1>
+
+        <p>
+            Welcome to the Student Management System.
+        </p>
+
+    </div>
+
+
+
+    <!-- STATISTICS -->
+
+    <section class="stats">
+
+
+        <div class="stat-card">
+
+            <h3>
+                Total Students
+            </h3>
+
+            <strong id="studentCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h3>
+                Total Teachers
+            </h3>
+
+            <strong id="teacherCount">
+                0
+            </strong>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section class="dashboard-sections">
+
+
+        <div class="dashboard-card">
+
+            <h2>
+                Students
+            </h2>
+
+            <p>
+                Manage student records, view details,
+                edit and delete students.
+            </p>
+
+
+            <div class="dashboard-actions">
+
+                <a
+                    href="students.html"
+                    class="add-student-btn"
+                >
+                    View Students
+                </a>
+
+                <a
+                    href="add-student.html"
+                    class="secondary-btn"
+                >
+                    Add Student
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="dashboard-card">
+
+            <h2>
+                Teachers
+            </h2>
+
+            <p>
+                Manage teacher records, subjects,
+                qualifications and contact details.
+            </p>
+
+
+            <div class="dashboard-actions">
+
+                <a
+                    href="teachers.html"
+                    class="add-student-btn"
+                >
+                    View Teachers
+                </a>
+
+                <a
+                    href="add-teacher.html"
+                    class="secondary-btn"
+                >
+                    Add Teacher
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<script src="js/app.js"></script>
+<script src="components/navbar.js"></script>
+<script>
+    createNavbar("dashboard");
+</script>
+
+</body>
+
+</html>

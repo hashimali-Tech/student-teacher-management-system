@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Teacher Details</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/teachers.css">
+
+</head>
+
+
+<body>
+    <div id="navbar"></div>
+
+    <header class="page-header">
+
+        <div>
+
+            <h1>Teacher Details</h1>
+
+            <p>
+                Complete teacher information
+            </p>
+
+        </div>
+
+
+        <a
+            href="teachers.html"
+            class="add-student-btn"
+        >
+            ← Back
+        </a>
+
+    </header>
+
+
+    <main class="teacher-details-container">
+
+        <div id="loading">
+            Loading teacher...
+        </div>
+
+
+        <div id="errorMessage"></div>
+
+
+        <section
+            id="teacherDetails"
+            class="teacher-details-card"
+        ></section>
+
+    </main>
+
+
+    <script src="js/teacher-details.js"></script>
+    <script src="components/navbar.js"></script>
+<script>
+    createNavbar("");
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/students.css">
+</head>
+
+<body>
+    <div id="navbar"></div>
+<!-- <nav class="navbar">
+
+    <a
+        href="index.html"
+        class="nav-brand"
+    >
+        🎓 Student Management
+    </a>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a
+                href="students.html"
+                class="active"
+            >
+                Students
+            </a>
+        </li>
+
+        <li>
+            <a href="add-student.html">
+                Add Student
+            </a>
+        </li>
+
+        <li>
+            <a href="teachers.html">
+                Teachers
+            </a>
+        </li>
+
+        <li>
+            <a href="add-teacher.html">
+                Add Teacher
+            </a>
+        </li>
+
+    </ul>
+
+</nav> -->
+    <!-- =========================
+         Header
+    ========================== -->
+
+    <header class="page-header">
+
+        <div>
+            <h1>Students</h1>
+            <p>Manage and view all students</p>
+        </div>
+
+        <a href="add-student.html" class="add-student-btn">
+            + Add Student
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         Main Content
+    ========================== -->
+
+    <main class="students-container">
+
+        <!-- Student Statistics -->
+
+        <section class="student-stats">
+
+            <div class="stat-card">
+
+                <span class="stat-title">
+                    Total Students
+                </span>
+
+                <span id="studentCount" class="stat-number">
+                    0
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Loading Message -->
+
+        <div id="loading">
+            Loading students...
+        </div>
+
+
+        <!-- Error Message -->
+
+        <div id="errorMessage"></div>
+
+
+        <!-- Students Cards -->
+
+        <section id="studentsContainer" class="students-grid">
+            <!-- Student cards will be inserted by JavaScript -->
+        </section>
+
+
+        <!-- No Students -->
+
+        <div id="noStudents" class="no-students">
+
+            <h2>No Students Found</h2>
+
+            <p>
+                There are currently no students in the database.
+            </p>
+
+            <a href="add-student.html">
+                Add Your First Student
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/students.js"></script>
+<script src="components/navbar.js"></script>
+<script>
+    createNavbar("students");
+</script>
+
+</body>
+</html>

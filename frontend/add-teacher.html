@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Add Teacher</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/teachers.css">
+
+</head>
+
+
+<body>
+
+    <div id="navbar"></div>
+
+
+    <div class="container">
+
+        <div class="form-card">
+
+            <h1>Add Teacher</h1>
+
+            <p class="form-description">
+                Enter teacher information.
+            </p>
+
+
+            <form
+                id="teacherForm"
+                enctype="multipart/form-data"
+            >
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Teacher Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required
+                        placeholder="Enter teacher name"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        required
+                        placeholder="teacher@gmail.com"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        required
+                        placeholder="03001234567"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        required
+                        placeholder="e.g. Database"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="qualification">
+                        Qualification
+                    </label>
+
+                    <input
+                        type="text"
+                        id="qualification"
+                        required
+                        placeholder="e.g. MS Computer Science"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="image">
+                        Teacher Profile Image
+                    </label>
+
+                    <input
+                        type="file"
+                        id="image"
+                        accept="image/jpeg,image/png,image/webp"
+                    >
+
+                </div>
+
+
+                <div
+                    id="imagePreview"
+                    style="display:none; margin-top:15px;"
+                >
+
+                    <img
+                        id="previewImage"
+                        src=""
+                        alt="Teacher Preview"
+                        style="
+                            width:120px;
+                            height:120px;
+                            object-fit:cover;
+                            border-radius:50%;
+                            border:3px solid #ddd;
+                        "
+                    >
+
+                </div>
+
+
+                <div id="message"></div>
+
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                >
+                    Add Teacher
+                </button>
+
+
+            </form>
+
+
+            <div class="back-link">
+
+                <a href="teachers.html">
+                    View Teachers
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="js/add-teacher.js"></script>
+
+    <script src="components/navbar.js"></script>
+
+    <script>
+        createNavbar("add-teacher");
+    </script>
+
+</body>
+
+</html>
+
+

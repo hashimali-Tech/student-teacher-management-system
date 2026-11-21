@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Details</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/students.css">
+</head>
+
+<body>
+    <div id="navbar"></div>
+<!-- 
+    <nav class="navbar">
+
+    <a
+        href="index.html"
+        class="nav-brand"
+    >
+        🎓 Student Management
+    </a>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a
+                href="students.html"
+                class="active"
+            >
+                Students
+            </a>
+        </li>
+
+        <li>
+            <a href="add-student.html">
+                Add Student
+            </a>
+        </li>
+
+        <li>
+            <a href="teachers.html">
+                Teachers
+            </a>
+        </li>
+
+        <li>
+            <a href="add-teacher.html">
+                Add Teacher
+            </a>
+        </li>
+
+    </ul>
+
+</nav> -->
+    <!-- Header -->
+
+    <header class="page-header">
+
+        <div>
+            <h1>Student Details</h1>
+            <p>View complete student information</p>
+        </div>
+
+        <a href="students.html" class="add-student-btn">
+            ← Back to Students
+        </a>
+
+    </header>
+
+
+    <!-- Main -->
+
+    <main class="student-details-container">
+
+        <!-- Loading -->
+
+        <div id="loading">
+            Loading student details...
+        </div>
+
+
+        <!-- Error -->
+
+        <div id="errorMessage"></div>
+
+
+        <!-- Student Details -->
+
+        <section
+            id="studentDetails"
+            class="student-details-card"
+        >
+
+            <!-- JavaScript will insert student information here -->
+
+        </section>
+
+    </main>
+     <!-- Hidden Image Input -->
+    <input
+        type="file"
+        id="changePhotoInput"
+        accept="image/jpeg,image/png,image/webp"
+        hidden
+    >
+
+
+    <script src="js/student-details.js"></script>
+<script src="components/navbar.js"></script>
+<script>
+    createNavbar("dashboard");
+</script>
+</body>
+</html>

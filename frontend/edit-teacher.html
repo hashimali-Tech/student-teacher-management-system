@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Edit Teacher</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div id="navbar"></div>
+
+    <div class="container">
+
+        <div class="form-card">
+
+            <h1>Edit Teacher</h1>
+
+            <p class="form-description">
+                Update teacher information.
+            </p>
+
+
+            <div id="loading">
+                Loading teacher...
+            </div>
+
+
+            <form
+                id="editTeacherForm"
+                style="display:none;"
+            >
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Teacher Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="qualification">
+                        Qualification
+                    </label>
+
+                    <input
+                        type="text"
+                        id="qualification"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="profileImage">
+                        Profile Picture
+                    </label>
+
+
+                    <div class="edit-profile-image">
+
+                        <img
+                            id="profilePreview"
+                            src=""
+                            alt="Profile Preview"
+                        >
+
+
+                        <div
+                            id="profilePlaceholder"
+                            class="profile-placeholder"
+                        >
+                            No Image
+                        </div>
+
+                    </div>
+
+
+                    <input
+                        type="file"
+                        id="profileImage"
+                        name="ProfileImage"
+                        accept="image/jpeg,image/png,image/webp"
+                    >
+
+
+                    <small>
+                        Select a new image to change the profile picture.
+                    </small>
+
+                </div>
+
+
+                <div id="message"></div>
+
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                >
+                    Update Teacher
+                </button>
+
+            </form>
+
+
+            <div class="back-link">
+
+                <a href="teachers.html">
+                    Cancel
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/edit-teacher.js"></script>
+
+    <script src="components/navbar.js"></script>
+
+    <script>
+        createNavbar("");
+    </script>
+
+</body>
+
+</html>

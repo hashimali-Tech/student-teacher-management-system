@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Edit Student</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+    <div id="navbar"></div>
+    <!-- <nav class="navbar">
+
+    <a
+        href="index.html"
+        class="nav-brand"
+    >
+        🎓 Student Management
+    </a>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="students.html">
+                Students
+            </a>
+        </li>
+
+        <li>
+            <a href="add-student.html">
+                Add Student
+            </a>
+        </li>
+
+        <li>
+            <a href="teachers.html">
+                Teachers
+            </a>
+        </li>
+
+        <li>
+            <a href="add-teacher.html">
+                Add Teacher
+            </a>
+        </li>
+
+    </ul>
+
+</nav> -->
+
+    <div class="container">
+
+        <div class="form-card">
+
+            <h1>Edit Student</h1>
+
+            <p class="form-description">
+                Update the student's information.
+            </p>
+
+
+            <!-- Loading -->
+
+            <div id="loading">
+                Loading student...
+            </div>
+
+
+            <!-- Form -->
+
+            <form
+                id="editStudentForm"
+                style="display: none;"
+            >
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter student name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter student email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Phone -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="03001234567"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Course -->
+
+                <div class="form-group">
+
+                    <label for="course">
+                        Course
+                    </label>
+
+                    <input
+                        type="text"
+                        id="course"
+                        name="course"
+                        placeholder="e.g. BSIT"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Semester -->
+
+                <div class="form-group">
+
+                    <label for="semester">
+                        Semester
+                    </label>
+
+                    <select
+                        id="semester"
+                        name="semester"
+                        required
+                    >
+
+                        <option value="">
+                            Select Semester
+                        </option>
+
+                        <option value="1">
+                            Semester 1
+                        </option>
+
+                        <option value="2">
+                            Semester 2
+                        </option>
+
+                        <option value="3">
+                            Semester 3
+                        </option>
+
+                        <option value="4">
+                            Semester 4
+                        </option>
+
+                        <option value="5">
+                            Semester 5
+                        </option>
+
+                        <option value="6">
+                            Semester 6
+                        </option>
+
+                        <option value="7">
+                            Semester 7
+                        </option>
+
+                        <option value="8">
+                            Semester 8
+                        </option>
+
+                    </select>
+
+                </div>
+                <!-- Profile Image -->
+<div class="form-group">
+    <label for="profileImage">
+        Profile Picture
+    </label>
+
+    <div class="edit-profile-image">
+        <img
+            id="profilePreview"
+            src=""
+            alt="Profile Preview"
+        >
+
+        <div
+            id="profilePlaceholder"
+            class="profile-placeholder"
+        >
+            No Image
+        </div>
+    </div>
+
+    <input
+        type="file"
+        id="profileImage"
+        name="ProfileImage"
+        accept="image/jpeg,image/png,image/webp"
+    >
+
+    <small>
+        Select a new image to change the profile picture.
+    </small>
+</div>
+
+
+                <!-- Message -->
+
+                <div id="message"></div>
+
+
+                <!-- Button -->
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                >
+                    Update Student
+                </button>
+
+            </form>
+
+
+            <!-- Back -->
+
+            <div class="back-link">
+
+                <a href="students.html">
+                    Cancel
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/edit-student.js"></script>
+<script src="components/navbar.js"></script>
+<script>
+    createNavbar("");
+</script>
+</body>
+
+</html>

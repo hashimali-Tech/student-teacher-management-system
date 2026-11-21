@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Teachers</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/teachers.css">
+
+</head>
+
+
+<body>
+    <div id="navbar"></div>
+
+    <header class="page-header">
+
+        <div>
+
+            <h1>Teachers</h1>
+
+            <p>
+                Manage all teachers
+            </p>
+
+        </div>
+
+
+        <a
+            href="add-teacher.html"
+            class="add-student-btn"
+        >
+            + Add Teacher
+        </a>
+
+    </header>
+
+
+    <main class="teachers-container">
+
+        <div class="teacher-stat">
+
+            <span>
+                Total Teachers
+            </span>
+
+            <strong id="teacherCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div id="loading">
+            Loading teachers...
+        </div>
+
+
+        <div id="errorMessage"></div>
+
+
+        <section
+            id="teachersContainer"
+            class="teachers-grid"
+        ></section>
+
+
+        <div
+            id="noTeachers"
+            class="no-teachers"
+        >
+
+            <h2>No Teachers Found</h2>
+
+            <p>
+                Add your first teacher.
+            </p>
+
+            <a href="add-teacher.html">
+                Add Teacher
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/teachers.js"></script>
+    <script src="components/navbar.js"></script>
+<script>
+    createNavbar("teacher");
+</script>
+
+</body>
+
+</html>

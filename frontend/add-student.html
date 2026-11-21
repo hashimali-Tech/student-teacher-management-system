@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Student</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="navbar"></div>
+<!-- <nav class="navbar">
+
+    <a
+        href="index.html"
+        class="nav-brand"
+    >
+        🎓 Student Management
+    </a>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="students.html">
+                Students
+            </a>
+        </li>
+
+        <li>
+            <a
+                href="add-student.html"
+                class="active"
+            >
+                Add Student
+            </a>
+        </li>
+
+        <li>
+            <a href="teachers.html">
+                Teachers
+            </a>
+        </li>
+
+        <li>
+            <a href="add-teacher.html">
+                Add Teacher
+            </a>
+        </li>
+
+    </ul>
+
+</nav> -->
+
+    <div class="container">
+
+        <div class="form-card">
+
+            <h1>Add Student</h1>
+
+            <p class="form-description">
+                Enter the student information below.
+            </p>
+
+            <form id="studentForm"  enctype="multipart/form-data">
+
+                <!-- Student Name -->
+                <div class="form-group">
+                    
+                    <label for="name">Student Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter student email"
+                        required
+                    >
+                </div>
+
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="03001234567"
+                        required
+                    >
+                </div>
+
+
+                <!-- Course -->
+                <div class="form-group">
+                    <label for="course">Course</label>
+
+                    <input
+                        type="text"
+                        id="course"
+                        name="course"
+                        placeholder="e.g. BSIT"
+                        required
+                    >
+                </div>
+
+
+                <!-- Semester -->
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+
+                    <select id="semester" name="semester" required>
+
+                        <option value="">Select Semester</option>
+
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+
+                    </select>
+
+                </div>
+                <div class="form-group">
+                     <label for="image">Student Profile Picture</label>
+
+                    <input
+                         type="file"
+                          id="image"
+        name="image"
+        accept="image/jpeg,image/png,image/webp"
+    >
+</div>
+
+
+                <!-- Error / Success Message -->
+                <div id="message"></div>
+
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitBtn">
+                    Add Student
+                </button>
+
+            </form>
+
+
+            <div class="back-link">
+                <a href="students.html">View Students</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/add-student.js"></script>
+<script src="components/navbar.js"></script>
+<script>
+    createNavbar("add-student");
+</script>
+
+</body>
+</html>
